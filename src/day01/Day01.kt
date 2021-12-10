@@ -1,3 +1,7 @@
+package day01
+
+import utils.Resources.resourceAsListOfInt
+
 fun main() {
     fun part1(input: List<Int>): Int {
         val listPairs = input.zipWithNext()
@@ -9,7 +13,7 @@ fun main() {
         return part1(listWindow)
     }
 
-    val input = readInput("Day01").map { it.toInt() }
+    val input = resourceAsListOfInt("src/day01/Day01.txt")
     println(part1(input))
     println(part2(input))
 }

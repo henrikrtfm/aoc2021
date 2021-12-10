@@ -1,3 +1,7 @@
+package day06
+
+import utils.Resources.resourceAsListOfString
+
 fun main() {
 
     fun updateState(input: Int): List<Int>{
@@ -21,7 +25,7 @@ fun main() {
         return answer.size
     }
 
-    val input = readInput("Day06")
+    val input = resourceAsListOfString("src/day06/Day06.txt")
     val initialstate = input.flatMap{it.split(",").map{ itx -> itx.toInt()}}
     //println(part1(initialstate))
     println(part2(initialstate))

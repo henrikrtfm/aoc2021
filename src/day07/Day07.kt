@@ -1,3 +1,6 @@
+package day07
+
+import utils.Resources.resourceAsString
 import kotlin.math.absoluteValue
 
 fun main() {
@@ -17,8 +20,8 @@ fun main() {
         return input.sumOf { ((it-mean).absoluteValue * (it-mean).absoluteValue + (it-mean).absoluteValue) /2 }
     }
 
-    val input1 = readInputLine("Day07").split(",").map{it.toDouble()}
-    val input2 = readInputLine("Day07").split(",").map{it.toInt()}
+    val input1 = resourceAsString("src/day07/Day07.txt").split(",").map{it.toDouble()}
+    val input2 = resourceAsString("src/day07/Day07.txt").split(",").map{it.toInt()}
     println(part1(input1))
     println(part2(input2))
 }

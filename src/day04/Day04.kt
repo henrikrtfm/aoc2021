@@ -1,3 +1,7 @@
+package day04
+
+import utils.Resources.resourceAsListOfString
+
 fun main() {
 
     fun createBoard(input: List<String>): List<List<Int>> =
@@ -41,8 +45,7 @@ fun main() {
 
     }
 
-
-    val input = readInput("Day04")
+    val input = resourceAsListOfString("src/day04/Day04.txt")
     val numbers = input.first().split(",").map { it.toInt() }
     val bingoBoards = input.asSequence().drop(1).filter{ it.isNotEmpty() }.chunked(5).map { createBoard(it) }.toSet()
     println(part1(numbers, bingoBoards))

@@ -1,6 +1,10 @@
+package day02
+
+import utils.Resources.resourceAsListOfString
+
 fun main() {
     fun part1(input: List<String>): Int {
-        val commandList = input.map(Command::parse)
+        val commandList = input.map(Command.Companion::parse)
         var horizontal = 0
         var depth = 0
         commandList.forEach {
@@ -14,7 +18,7 @@ fun main() {
     }
 
     fun part2(input: List<String>): Int {
-        val commandList = input.map(Command::parse)
+        val commandList = input.map(Command.Companion::parse)
         var horizontal = 0
         var depth = 0
         var aim = 0
@@ -31,7 +35,7 @@ fun main() {
         return horizontal*depth
     }
 
-    val input = readInput("Day02")
+    val input = resourceAsListOfString("src/day02/Day02.txt")
     println(part1(input))
     println(part2(input))
 }

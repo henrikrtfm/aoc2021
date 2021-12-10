@@ -1,3 +1,7 @@
+package day08
+
+import utils.Resources.resourceAsListOfString
+
 fun main() {
 
     fun uniqueCount(segment: String): Int{
@@ -60,7 +64,7 @@ fun main() {
         return answer.sumOf { it.toInt() }
     }
 
-    val input = readInput("Day08")
+    val input = resourceAsListOfString("src/day08/Day08.txt")
     //println(part1(input))
     println(part2(input))
 }
